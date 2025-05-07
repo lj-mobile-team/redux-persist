@@ -142,6 +142,8 @@ export default function persistReducer<S, A extends Action>(
               }
             )
           }
+          //@ts-ignore
+          else _rehydrate(undefined, "")
         },
         err => {
           _rehydrate(undefined, err)
